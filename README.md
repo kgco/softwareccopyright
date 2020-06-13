@@ -22,8 +22,12 @@
 - `\contens`：一个独占一页、没有页眉的目录页。文档会自动为说明书文档在标题页后加载目录页。
 
 ## lststyle
-- `codestyle`：自动隐藏注释、隐藏空白行、允许换行的`listings`样式，默认语言为Python。
+- `codestyle`：自动隐藏注释、隐藏空白行、允许换行的`listings`样式，默认语言为Python。若将语言改为其他语言，只需要将`codestyle`定义中的`language`键值和两个`morecomment`键值改掉即可，例如C++改为`language=C++,morecomment=[is]{/*}{*/},morecomment=[il][//]`。
 - `codestyleln`：同上，但在左侧加注行号
 
 ## Headers
 页眉样式居中显示`\@title`，右侧显示第X页
+
+## PageSize
+源码文档中，调整页面大小至每页50行以上源码。
+注：直接`\geometry{textheight=50\baselineskip}`着实有点丑，所以我配合了`\renewcommand{\baselinestretch}{}`。

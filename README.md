@@ -1,6 +1,13 @@
 # mancls：一个简单的软件著作权申请的TeX文档类
 
-注意：应当在导言部分将`\title`定义为你的软件名，如“素数生成软件V1.0”
+## Usage
+1. 调用文档类：
+  * 若文档为软件说明书，直接调用：`\documentclass{mancls}`。
+  * 若文档为源码文件，加`code`选项：`\documentclass[code]{mancls}`
+2. 在导言部分将`\title`定义为你的软件名，如`\title{素数生成软件V1.0}`。
+3. 开始编写文档：
+  * 若文档为软件说明书，直接编写内容，**无需手动添加标题与目录**。
+  * 若文档为源码文件，直接使用`\lstinputlisting`引入文件源码文件，并将样式修改为`codestyle`即可，如：`\lstinputlisting[style=codestyle]{main.py}`
 
 ## Options
 - `code`：标明本文档是源码文档，否则是说明书文档
